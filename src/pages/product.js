@@ -55,7 +55,7 @@ export default function Product({ product }) {
   );
 }
 
-export async function getStaticPaths() {
+/*export async function getStaticPaths() {
   // Fetch all products to pre-generate paths
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
   const products = await res.json();
@@ -84,5 +84,12 @@ export async function getServerSideProps({ params }) {
     return { props: { product } };
   } catch {
     return { props: { product: null } };
+  }
+}*/
+export async function getServerSideProps() {
+  const res = await fetch('https://fakestoreapi.com/products');
+  const products = await res.json();
+  return {
+    props: { products }
   }
 }
