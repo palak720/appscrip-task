@@ -1,34 +1,10 @@
 
-/*import Head from 'next/head';
-import { fetchProductById } from '../../lib/api';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-
-export default function Product({ product }) {
-  if (!product) return <p>Product not found</p>;
-  return (
-    <>
-      <Head>
-        <title>{product.title} | YourBrand</title>
-        <meta name="description" content={product.description.slice(0,140)} />
-      </Head>
-      <Header />
-      <main style={{ padding: 20, maxWidth: 1100, margin: '0 auto' }}>
-        <h1>{product.title}</h1>
-        <img src={product.image} alt={`${product.title}`} style={{ maxWidth: 360 }} />
-        <p>{product.description}</p>
-        <p><strong>Price:</strong> ${product.price}</p>
-      </main>
-      <Footer />
-    </>
-  );
-}*/
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { fetchProductById } from "../../lib/api";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import styles from "../../styles/Product.module.css";
+import { fetchProductById } from "../lib/api";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import styles from "../styles/Product.module.css";
 
 export default function Product({ product }) {
   const router = useRouter();
