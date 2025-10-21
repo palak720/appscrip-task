@@ -1,49 +1,4 @@
 
-/*.card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #fff;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.imageWrap {
-  width: 100%;
-  aspect-ratio: 1/1;
-  overflow: hidden;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.meta {
-  padding: 10px;
-  text-align: center;
-}
-
-.title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 8px 0;
-}
-
-.price {
-  color: #555;
-  font-weight: 500;
-}*/
 
 .card {
   background: #fff;
