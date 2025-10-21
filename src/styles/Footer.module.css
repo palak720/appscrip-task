@@ -1,0 +1,230 @@
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 3rem 6%;
+  font-family: "Inter", sans-serif;
+}
+
+/* Top Section */
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.p {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.subscribe {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe button {
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.subscribe button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.contact h4,
+.currency h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.currencyInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flag {
+  width: 22px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.note {
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.divider {
+  border: 0.5px solid #333;
+  margin: 2rem 0;
+}
+
+/* Desktop bottom layout */
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.column h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.column li:hover {
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.socials a {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #fff;
+}
+
+.payments h4 {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.icons img {
+  width: 40px;
+  height: auto;
+}
+
+.copy {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 3rem;
+}
+
+/* Mobile Accordion */
+.accordion {
+  display: none;
+}
+
+/* ============ MOBILE VIEW ============ */
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+  }
+
+  .bottomSection {
+    display: none;
+  }
+
+  .accordion {
+    display: block;
+  }
+
+  .section {
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+  }
+
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.8rem 0;
+    color: #fff;
+  }
+
+  .list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0 1rem;
+  }
+
+  .list li {
+    color: #ccc;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .list li:hover {
+    color: #fff;
+  }
+
+  /* Fix: Make social icons visible & aligned */
+  .socials {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0.8rem 0;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .socials a {
+    font-size: 1.4rem;
+    color: #ccc;
+    transition: 0.3s;
+  }
+
+  .socials a:hover {
+    color: #fff;
+  }
+
+  /* Fix divider padding in mobile */
+  .divider {
+    margin: 1rem 0;
+  }
+}
