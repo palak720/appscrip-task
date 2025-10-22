@@ -1,4 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+
+# 🏎️ Appscrip-task
+
+## 🧥 F1-Inspired Streetwear — Product Listing Page (PLP)
+
+This project is a **Next.js Product Listing Page (PLP)** demo built for **F1-inspired streetwear**.  
+It demonstrates **Server-Side Rendering (SSR)**, **responsive design** for mobile and tablet, **SEO optimization**, and uses **Fakestore API** as a mock backend.
+
+---
+
+## 🚀 Live Demo
+
+The page is hosted on Netlify:  
+👉 [**Live PLP Demo**](https://appscrip-task-7e293b.netlify.app/)  
+
+
+---
+
+## 🧱 Features
+
+- ⚛️ **Next.js with React.js** – Functional PLP implementation  
+- 🧠 **Server-Side Rendering (SSR)** – Data fetched on each request using `getServerSideProps`  
+- 📱 **Responsive Design** – Optimized for desktop, tablet, and mobile screens  
+- 🔍 **SEO Optimized**
+  - Custom page title and meta description  
+  - Proper H1 & H2 hierarchy  
+  - SEO-friendly images with descriptive alt text  
+  - JSON-LD schema markup for products  
+- 💾 **Dynamic Data** – Uses [Fakestore API](https://fakestoreapi.com/) for mock data  
+- 🧩 **Clean Code** – Minimal dependencies, semantic HTML, and modular structure  
+
+---
+
+---
+
+## ⚙️ Installation & Running Locally
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/palak720/appscrip-task
+cd appscrip-task
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the development server
+npm run dev
+
+4️⃣ Open in browser
+http://localhost:3000/plp
+
+🧰 Deployment
+
+This project is configured for Netlify deployment with SSR support using @netlify/plugin-nextjs.
+
+🪶 netlify.toml Configuration
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+  ➡️ Steps:
+
+Push your project to GitHub
+
+Connect the repo to Netlify
+
+Netlify will automatically build and deploy your app.
+
+🔧 Key Implementation Details
+⚙️ Server-Side Rendering (SSR)
+export async function getServerSideProps() {
+  const res = await fetch('https://fakestoreapi.com/products');
+  const products = await res.json();
+
+  return {
+    props: { products },
+  };
+}
+
+
+✅ Ensures fresh data is served on every request
+✅ Improves SEO by pre-rendering HTML with product data
+
+🧭 SEO Optimization
+
+<Head> includes title, meta description, and JSON-LD schema
+
+H1 / H2 tags for hierarchy
+
+Images use alt text and SEO-friendly filenames
+
+Example JSON-LD schema:
+
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "F1 Streetwear Collection",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Product 1", "url": "https://site.com/product/1" }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+This is a [Next.js](https://nextjs.org) project 
+bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
 
